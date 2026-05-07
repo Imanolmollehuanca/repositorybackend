@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Node.js — Dashboard</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="rocket-wrap">🚀</div>
+      <h1>Frontend <span>conectado</span> al backend</h1>
+      <p class="subtitle">Render · Node.js · v18.20.4<span class="cursor"></span></p>
+      <div class="status-badge">
+        <span class="dot"></span>
+        Todos los sistemas operativos
+      </div>
+    </header>
+ 
+    <div class="metrics">
+      <div class="metric">
+        <span class="metric-icon">⚡</span>
+        <span class="metric-value">99.9%</span>
+        <span class="metric-label">Uptime</span>
+      </div>
+      <div class="metric">
+        <span class="metric-icon">🔥</span>
+        <span class="metric-value">48ms</span>
+        <span class="metric-label">Latencia</span>
+      </div>
+      <div class="metric">
+        <span class="metric-icon">👥</span>
+        <span class="metric-value">1.2k</span>
+        <span class="metric-label">Requests/h</span>
+      </div>
+    </div>
+ 
+    <div class="card" style="animation-delay: 0.2s;">
+      <p class="card-title">Rendimiento del sistema</p>
+      <div class="bar-row">
+        <div class="bar-meta"><span>CPU</span><span>23%</span></div>
+        <div class="bar-track">
+          <div class="bar-fill blue" style="--w: 23%;"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span>Memoria</span><span>61%</span></div>
+        <div class="bar-track">
+          <div class="bar-fill amber" style="--w: 61%;"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span>Ancho de banda</span><span>38%</span></div>
+        <div class="bar-track">
+          <div class="bar-fill green" style="--w: 38%;"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="card" style="animation-delay: 0.3s;">
+      <p class="card-title">Servicios conectados</p>
+      <div class="service-row">
+        <div class="service-left">
+          <span class="service-icon">🗄️</span>
+          Base de datos
+        </div>
+        <span class="badge-ok">ACTIVO</span>
+      </div>
+      <div class="service-row">
+        <div class="service-left">
+          <span class="service-icon">☁️</span>
+          Storage en la nube
+        </div>
+        <span class="badge-ok">ACTIVO</span>
+      </div>
+      <div class="service-row">
+        <div class="service-left">
+          <span class="service-icon">🔐</span>
+          Autenticación
+        </div>
+        <span class="badge-ok">ACTIVO</span>
+      </div>
+      <div class="service-row">
+        <div class="service-left">
+          <span class="service-icon">📧</span>
+          Servicio de email
+        </div>
+        <span class="badge-warn">DEGRADADO</span>
+      </div>
+    </div>
+ 
+    <div class="console">
+      <div class="console-header">
+        <div class="console-dot" style="background:#ff5f57;"></div>
+        <div class="console-dot" style="background:#febc2e;"></div>
+        <div class="console-dot" style="background:#28c840;"></div>
+      </div>
+      <div class="log-line"><span class="time">[09:14:02]</span> <span class="ok">✓</span> <span class="msg">Servidor iniciado en puerto 3000</span></div>
+      <div class="log-line"><span class="time">[09:14:03]</span> <span class="info">→</span> <span class="msg">Conectado a base de datos</span></div>
+      <div class="log-line"><span class="time">[09:14:04]</span> <span class="ok">✓</span> <span class="msg">Health check: OK</span></div>
+      <div class="log-line"><span class="time">[09:15:21]</span> <span class="warn">⚠</span> <span class="msg">Email service latency alta: 840ms</span></div>
+      <div class="log-line"><span class="time">[09:16:10]</span> <span class="ok">✓</span> <span class="msg">GET /api/status 200 — 48ms</span></div>
+    </div>
+ 
+    <div class="actions">
+      <button class="btn btn-primary" onclick="alert('Reiniciando servicio...')">
+        ↺ Reiniciar
+      </button>
+      <button class="btn btn-secondary" onclick="window.location.reload()">
+        Ver logs
+      </button>
+    </div>
+  </div>
+</body>
+</html>
